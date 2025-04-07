@@ -1947,7 +1947,8 @@ Breadcrumb
 	float: none;
 }
 
-/*+++++++++++++++++++++++++++++++++++++++++++++++
+/*Header
++++++++++++++++++++++++++++++++++++++++++++++++
 +++++++++++++++++++++++++++++++++++++++++++++++*/
 .animated {
 	animation-duration: 1.25s;
@@ -2011,7 +2012,7 @@ header#pq-header.pq-header-sticky {
 	position: fixed;
 	top: 0;
 	left: 0;
-	display: inline-block;
+	
 	width: 100%;
 	-webkit-box-shadow: 0px 5px 15px 0px rgba(0, 33, 85, 0.1);
 	-moz-box-shadow: 0px 5px 15px 0px rgba(0, 33, 85, 0.1);
@@ -2144,53 +2145,65 @@ header#pq-header .pq-bottom-header .navbar .navbar-brand img {
 }
 
 /*++++++ Header Navbar Bar +++++*/
-
 header#pq-header .pq-bottom-header {
-	min-height: 90px;
-	transition: all 0.8s ease;
+    min-height: 90px;
+    transition: all 0.8s ease;
 }
 
 header#pq-header .pq-bottom-header .navbar {
-	padding: 0 !important;
-	display: flex !important;
-	justify-content: space-between !important; /* Keep logo on left, menu on right, but we’ll center menu */
-	align-items: center !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important; /* Aligns all content to the left */
+	margin-left: 0 !important;
 }
 
-header#pq-header .pq-bottom-header .navbar .pq-menu-contain {
-	display: inline-block !important;
-	width: 100% !important;
+header#pq-header .pq-bottom-header .navbar .navbar-brand {
+    line-height: 80px;
+    
+    margin-right: 20px !important; /* Adds spacing between logo and menu */
+    display: flex !important;
+    align-items: center !important;
+}
+
+header#pq-header .pq-bottom-header .navbar .navbar-brand img {
+    height: 80px !important;
+    margin-left: 0 !important;
+    margin-right: 5px !important;
 }
 
 header#pq-header .pq-bottom-header .navbar .navbar-nav {
-	float: none !important;
-	margin-left: auto !important;
-	margin-right: auto !important; /* Center the nav items */
-	display: flex !important;
-	justify-content: center !important; /* Center the menu items horizontally */
+    display: flex !important;
+    margin: 0 !important; /* Reset all margins */
+    padding: 0 !important; /* Reset padding */
+    justify-content: flex-start !important; /* Align items to the left */
+    align-items: center !important; /* Vertically center menu items */
 }
 
 header#pq-header .pq-bottom-header .navbar .navbar-nav li {
-	position: relative;
-	display: inline-block;
-	float: left;
-	margin-right: 30px;
-	color: var(--dark-color);
-	line-height: 90px;
-	font-weight: 600;
-	font-family: var(--title-fonts);
+    position: relative;
+    display: inline-block;
+    
+    margin-right: 20px;
+    color: var(--dark-color);
+    line-height: 80px;
+    font-weight: 600;
+    font-family: var(--title-fonts);
 }
 
 header#pq-header .pq-bottom-header .navbar .navbar-nav li:last-child {
-	margin-right: 0;
+    margin-right: 0;
 }
 
 header#pq-header .pq-bottom-header .navbar .navbar-nav li a {
-	color: var(--dark-color);
-	font-size: 16px;
-	text-transform: capitalize;
-	line-height: 24px;
-	font-weight: 600;
+    color: var(--dark-color);
+    font-size: 16px;
+    text-transform: capitalize;
+    line-height: 24px;
+    font-weight: 600;
+}
+header#pq-header .pq-bottom-header .navbar .navbar-toggler {
+    margin-left: auto; /* Push toggle button to the right */
 }
 
 header#pq-header .pq-bottom-header .navbar .navbar-nav li a:focus,
@@ -2199,8 +2212,9 @@ header#pq-header .pq-bottom-header .navbar .navbar-nav li.current-menu-item a,
 header#pq-header .pq-bottom-header .navbar .navbar-nav li.current_page_item a,
 header#pq-header .pq-bottom-header .navbar .navbar-nav li:hover a,
 header#pq-header .pq-bottom-header .navbar .navbar-nav li.current-menu-ancestor a {
-	color: var(--primary-color);
+    color: var(--primary-color);
 }
+
 /*++++++++ Sub Menu Bar ++++++++*/
 
 header#pq-header .pq-bottom-header .navbar .navbar-nav li .sub-menu {
@@ -3558,38 +3572,51 @@ footer#pq-footer .pq-footer-bottom-list .row {
 }
 
 footer#pq-footer .pq-footer-img {
-	background: var(--primary-color);
+	background: #f5f5f5;;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	height: 100%;
+	border-radius: 8px;
 }
 
+footer#pq-footer .pq-footer-logo {
+    height: 60px;
+    width: auto;
+    border-radius: 8px; /* Added border radius for the image itself */
+}
 footer#pq-footer .pq-footer-bottom-list .row .col-lg-4:last-child {
 	border-right: none;
 }
 
+/* Remove the line from all items */
+/* Remove the line from all items */
 footer#pq-footer .pq-footer-bottom-list .pq-footer-items:before {
-	position: absolute;
-	right: 20px;
-	top: 50%;
-	content: "";
-	background: rgba(0, 0, 0, 0.1);
-	width: 1px;
-	height: 45%;
-	transform: translateY(-50%);
+    display: none;
 }
 
-footer#pq-footer .pq-footer-bottom-list .row .col-lg-4:last-child .pq-footer-items:before {
-	display: none;
+/* Keep the box styling */
+footer#pq-footer .pq-footer-top .pq-footer-bottom-list .pq-footer-items {
+    background: #f5f5f5;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    min-height: 80px;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0; /* Add border for separation if needed */
+    border-radius: 8px;
+    margin: 0 10px 20px 10px; /* Add margin for spacing */
 }
 
 footer#pq-footer .pq-footer-top .pq-footer-bottom-list .pq-footer-items {
-	padding: 30px;
-	display: flex;
-	align-items: center;
-	background: var(--grey-color);
-	position: relative;
+    background: #f5f5f5; /* Or use your intended grey tone */
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    min-height: 100px;
+    box-sizing: border-box;
 }
 
 footer#pq-footer .pq-footer-top .pq-footer-bottom-list .pq-footer-items i {
@@ -3605,6 +3632,7 @@ footer#pq-footer .pq-footer-top .pq-footer-bottom-list .pq-footer-items i {
 	float: left;
 	text-align: center;
 	flex: none;
+	
 }
 
 footer#pq-footer .pq-footer-top .pq-footer-bottom-list .pq-footer-items h4 {
@@ -3636,7 +3664,15 @@ footer#pq-footer .pq-footer-top .pq-footer-usefull {
 footer#pq-footer .pq-footer-top .pq-footer-address {
 	padding-right: 30px;
 }
+footer#pq-footer .pq-footer-bottom-list .row.no-gutters > [class*="col-"] {
+    display: flex;
+}
 
+
+/* Ensure footer items fill their column height */
+footer#pq-footer .pq-footer-items {
+    flex: 1;
+}
 
 footer#pq-footer .widget .menu-useful-links-container ul.menu li a {
 	padding-left: 0;
