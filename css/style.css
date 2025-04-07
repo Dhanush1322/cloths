@@ -3562,7 +3562,7 @@ footer#pq-footer .widget:first-child {
 /*======= Footer Top list =======*/
 footer#pq-footer .pq-footer-bottom-list {
 	padding: 0 0 60px;
-	margin-top: -60px;
+	margin-top:20px;
 	position: relative;
 	z-index: 9;
 }
