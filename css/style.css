@@ -94,6 +94,81 @@ Moz Selection
 	color: #fff;
 }
 
+/* Banner and Slider Base Styles */
+#rev_slider_3_1,
+#rev_slider_3_1_wrapper,
+.rs-slides,
+.rs-slide,
+.rev-slidebg {
+    height: 900px !important;
+    max-height: 800px !important;
+    overflow: hidden;
+    width: 100% !important;
+}
+.move-up {
+	position: relative;
+	top: -40px; /* Adjust this value as needed */
+  }
+  
+
+/* Make image fit properly */
+.rev-slidebg {
+    object-fit: cover !important;
+}
+
+/* Margin after banner to push next section down */
+.banner {
+    margin-bottom: 80px; /* Adjust if you need more or less spacing */
+}
+
+/* Responsive Tablet View (<= 991px) */
+@media (max-width: 991px) {
+    #rev_slider_3_1,
+    #rev_slider_3_1_wrapper,
+    .rs-slides,
+    .rs-slide,
+    .rev-slidebg {
+        height: 600px !important;
+        max-height: 600px !important;
+    }
+
+    .banner {
+        margin-bottom: 60px;
+    }
+}
+
+/* Responsive Mobile View (<= 767px) */
+@media (max-width: 767px) {
+    #rev_slider_3_1,
+    #rev_slider_3_1_wrapper,
+    .rs-slides,
+    .rs-slide,
+    .rev-slidebg {
+        height: 450px !important;
+        max-height: 450px !important;
+    }
+
+    .banner {
+        margin-bottom: 50px;
+    }
+
+    /* Optional: adjust text font sizes if needed */
+    #slider-3-slide-5-layer-0,
+    #slider-3-slide-5-layer-1,
+    #slider-3-slide-5-layer-2,
+    #slider-3-slide-5-layer-3 {
+        font-size: 20px !important;
+        line-height: 1.4 !important;
+    }
+}
+#rev_slider_3_1_wrapper,
+#rev_slider_3_1,
+.rs-slides,
+.rs-slide,
+.rev-slidebg {
+  overflow: visible !important;
+}
+
 
 /*+++++++++++++++++++++++++++++++++++++++++++++++
 General
