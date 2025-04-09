@@ -157,8 +157,8 @@ Moz Selection
     #slider-3-slide-5-layer-1,
     #slider-3-slide-5-layer-2,
     #slider-3-slide-5-layer-3 {
-        font-size: 20px !important;
-        line-height: 1.4 !important;
+        
+		transform: translateY(-20px) !important;
     }
 }
 #rev_slider_3_1_wrapper,
@@ -167,6 +167,44 @@ Moz Selection
 .rs-slide,
 .rev-slidebg {
   overflow: visible !important;
+}
+ 
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++
+services
+++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+@media (max-width: 767px) {
+    .home-page .service {
+        margin-top: 0px !important;
+        padding-top: 150px;
+        padding-bottom: 0px;
+    }
+
+    .home-page .pq-service-div {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .home-page .pq-fancy-box {
+        margin-bottom: 20px;
+    }
+
+    .home-page .banner-class-selector {
+        height: auto;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .home-page body,
+    .home-page html {
+        overflow-x: hidden;
+    }
+
+    .home-page .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 
